@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import './Followers.css'
 
 export class Followers extends Component {
    constructor(props){
@@ -11,20 +12,25 @@ export class Followers extends Component {
    }
 
    componentDidMount(){
-      if (this.props.foll_url)
-      this.getFollowers(this.props.foll_url); 
+      if (this.props.followers_url)
+      this.getFollowers(); 
    }
 
-   getFollowers = url => {
-      axios.get(url)
+   getFollowers = () => {
+      axios.get(this.props.followers_url)
       .then(res => this.setState({ followers: res.data }))
+      .catch(err => console.log(err))
    }
    render() {
-      const { followers } = this.state; 
+      const { followers } = this.state;
+      console.log('followers ', this.props.followers_url) 
       return (
-         <div>
-            { followers.map(follower => (
-               <div key={follower.id} ></div>
+         <div className='followers-list' >
+            {followers.length>0 && followers.map(follower => (
+               <div key={follower.id}  >
+               <img src={follower.avatar_url} className='follower-image' />
+               <h2> {follower.login} </h2>
+               </div>
             )) }
          </div>
       )

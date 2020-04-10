@@ -1,0 +1,45 @@
+.single-component{
+   width: 100%;
+   margin-top: 10vh;
+}
+
+.goback-btn{
+   width: 80px;
+   height: 40px;
+   font-size: large;
+   border-radius: 5px;
+}
+
+
+
+.name{
+   font-size: xx-large;
+   margin-top: 20px;
+}
+
+.rep-image {
+   width: 60%;
+   border-radius: 10px;
+}
+@media(min-width:530px) and (max-width: 768px){
+   .rep-image{
+      width: 95%;
+      margin: auto;
+   }
+   .repository{
+      width: 100%;
+      margin: auto;
+   }
+}
+
+
+@media(max-width:530px){
+   .rep-image{
+      width: 95%;
+      margin: auto;
+   }
+   .repository{
+      width: 100%;
+      margin: auto;
+   }
+}

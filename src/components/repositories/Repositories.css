@@ -1,0 +1,48 @@
+
+.user-repository-comp{
+   margin: auto;
+}
+
+.repos-table{
+   width: 90%;
+   margin: auto;
+   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   border-collapse: collapse;
+   margin-bottom: 40px;
+   text-align: left;
+}
+
+.repos-table td, .repos-table th {
+   border: 1px solid #ddd;
+   padding: 8px;
+}
+
+.repos-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.repos-table tr:hover {background-color: #ddd;}
+
+.repos-table th {
+ padding-top: 12px;
+ padding-bottom: 12px;
+ text-align: left;
+ background-color: #1aa3ff;
+ color: white;
+}
+.repos-table thead {
+ padding-top: 12px;
+ padding-bottom: 12px;
+ text-align: left;
+ /* background-color: #4CAF50; */
+ background-color: #1aa3ff;
+ color: white;
+ font-size: large;
+}
+
+@media(max-width: 600px){
+   .desktop-only{
+      display: none;
+   }
+   .repos-table{
+      width: 100%;
+   }
+}
